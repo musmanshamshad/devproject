@@ -80,7 +80,7 @@ export const Span = styled("span")(({ theme }) => ({
   cursor: "pointer",
 }));
 export const StackWrapper = styled(Stack)(({ theme }) => ({
-  width: "182px",
+  width: "225px",
   marginRight: "50px",
   [theme.breakpoints.down('sm')]: {
     marginRight: "0px", 
