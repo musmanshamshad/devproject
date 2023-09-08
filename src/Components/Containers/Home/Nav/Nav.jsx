@@ -3,7 +3,7 @@ import Stack from "../../../UI/Stack/Stack";
 import { useDispatch, useSelector } from "react-redux";
 import { authActions } from "../../../../redux/reducers/auth.js";
 import api from "./../../../../Services";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import defaultImg from "./../../../../assets/images/user/default.png";
 import LogoutIcon from "@mui/icons-material/Logout";
 import {
@@ -23,11 +23,13 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { IconButton } from "@mui/material";
 const Nav = ({ appbarheight, isXs, setDrawerWidth, drawerWidth }) => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const logoutHandler = (e) => {
     e.preventDefault();
     dispatch(authActions.loginHandler({ loggedIn: "false" }));
     dispatch(userActions.logOutHandler());
     localStorage.removeItem("auth");
+    return navigate("/auth", { replace: true });
   };
 
   const userData = useSelector((state) => state.user);

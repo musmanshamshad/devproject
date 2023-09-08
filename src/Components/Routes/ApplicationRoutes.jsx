@@ -23,7 +23,9 @@ const ApplicationRoutes = () => {
     <Routes>
       <Route
         path="/auth"
-        element={isLoggedIn === "true" ? <Navigate to="/" /> : <Auth />}
+        element={
+          isLoggedIn === "true" ? <Navigate to="/dashboard" /> : <Auth />
+        }
       >
         <Route index path="" element={<Login />} />
         <Route path="link_reset" element={<LinkReset />} />
@@ -33,10 +35,10 @@ const ApplicationRoutes = () => {
         <Route path="verify-password" element={<VerifyPassword />} />
       </Route>
       <Route path="/" element={<ProtectedRoute />}>
-        <Route path="/" element={<Navigate to="/dashboard" />} />
-        <Route path="/user" element={<Users />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/dashboard/:name/:id/:value" element={<Subject />}>
+        <Route index element={<Dashboard />} />
+        <Route path="user" element={<Users />} />
+        <Route path="dashboard" element={<Dashboard />} />
+        <Route path="dashboard/:name/:id/:value" element={<Subject />}>
           <Route
             path=""
             element={<Navigate to={paths[0].name} replace={true} />}
