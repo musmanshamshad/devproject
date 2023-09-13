@@ -20,44 +20,7 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan 3.7.69.51 >> ~/.ssh/known_hosts
         env:
-          MYSECRETKEY1: ${{ -----BEGIN OPENSSH PRIVATE KEY-----
-                            b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAABlwAAAAdzc2gtcn
-                            NhAAAAAwEAAQAAAYEAr7iDWbAjYKlf6vhjDR4vwA5n39GHgGH49IMtWS+pF4JSGa4Ru9Fe
-                            DU/1+VMQGh755GJihPZxn78Poo5lbt1Unja1Q4QgPavDf2hkKiTWDMyEY6DRkZwn0kP18k
-                            QwRB3tf3NUjNOseF+NFWzivMG8z7DiX/OGKoFHfuQsDzYvpQ5HvCgPyUWxy5XMnvNqpUey
-                            qICZsx7LWjOFHM5L3HxCNflLnUHHn6cQg6x3ddeNfgx5RSo3g/YIUUCd3a/tvoh94sVMaB
-                            VOxM5eDN/IdDJBwHZrLsYzLi3LoEDXdxibHbm9kMRjnPeP4ghsLIDXvmG5pm5i9+VyGuCX
-                            maZOYR8WmZvyRr9fFS5hjhMKnwfSjiujelrhjI6PQRJzFAGJrOHS2c7gsFcOOmmga+9sdW
-                            1W5DdLRJlo3GcWt/iVG69ViT84lUpz+pDV1YQYlr0apaQWqjzc2UhnqLErXF4ABXAVAGAf
-                            ynfZxXjCXqB3Kra+KnEZoBRdz0py6IGhSr0PmoOZAAAFkN+b9+7fm/fuAAAAB3NzaC1yc2
-                            EAAAGBAK+4g1mwI2CpX+r4Yw0eL8AOZ9/Rh4Bh+PSDLVkvqReCUhmuEbvRXg1P9flTEBoe
-                            +eRiYoT2cZ+/D6KOZW7dVJ42tUOEID2rw39oZCok1gzMhGOg0ZGcJ9JD9fJEMEQd7X9zVI
-                            zTrHhfjRVs4rzBvM+w4l/zhiqBR37kLA82L6UOR7woD8lFscuVzJ7zaqVHsqiAmbMey1oz
-                            hRzOS9x8QjX5S51Bx5+nEIOsd3XXjX4MeUUqN4P2CFFAnd2v7b6IfeLFTGgVTsTOXgzfyH
-                            QyQcB2ay7GMy4ty6BA13cYmx25vZDEY5z3j+IIbCyA175huaZuYvflchrgl5mmTmEfFpmb
-                            8ka/XxUuYY4TCp8H0o4ro3pa4YyOj0EScxQBiazh0tnO4LBXDjppoGvvbHVtVuQ3S0SZaN
-                            xnFrf4lRuvVYk/OJVKc/qQ1dWEGJa9GqWkFqo83NlIZ6ixK1xeAAVwFQBgH8p32cV4wl6g
-                            dyq2vipxGaAUXc9KcuiBoUq9D5qDmQAAAAMBAAEAAAGBAJeA9bcJd6cqwal8mSJBSZhEk2
-                            jVZgfZ8OUYiKvhvN+pHBJKE74k6Pt/Wqup4zMyS/COpzTOqu65s8hLD8eDiyaSMrzQmV+y
-                            zW73WY1Aj1EfsHGZwbbStT7EG7TS9+5zA0ck79wv0P9EGwdDB0cJnzpO3w8tjxrstfEA18
-                            ARzwh3hIAE5n952K6YLIFLjEKOy8oefuaCAYB29Sj98Uhb1lZk573hbjUHvORaefEfdT4d
-                            kR2CJbVgFpG/rZzqx4fEc5+CCAHZBg9wYUatfMJzXgsjMFuVgyJrCUW+NscYJ48vSl9WWY
-                            WHXnD+TtWC9E5+T0xSUfx6iE5zJRQXo9DB484YF+XhCzXXREV/Ax+XZJndGs1rD3cbRWEc
-                            6o/7strtS/G/LLVt+5FgBeL8FEQJhVgU5Q2cvKZaRxs96OK2ScfKybwKY25Bc48awDQF55
-                            cPKI58keNm8F1lhPnfiSlDxVHNvQAlyTUhYE/8yLjAJYZkZ86pNQfzp1IUr8X/3ao6FQAA
-                            AMB+MpLBxDpZEG0gylZgd+YUUVLqvrhSQ4fCkMkkPQoT3D3ULVhE4ssL8q5yuREm7vtHNL
-                            NYLDDDrdq5Q7VIAC/2QLFs0EnaVVaqLTfYj7Ka1x7JnFyt7Ak+R02fAOHDGMYLG++daB0z
-                            FTiHLw2k+4PV2EpoiOMGaeewCuS0v/CwBBkZl47LmwMxToFYFPAQYlCHl+xPIkFsAYQVNg
-                            u7WLnUsMs/abbxduKkvck8cHbDFYW/3wAKJrCeHRM1m9/IamkAAADBANpnBWq6t+xG7COu
-                            f5KH+06xN1RJ+TCErQ5b3pnVM3xHIWrxb/tzkwkNBNl9DkqglltYGHWdTGDfTReUofQTTy
-                            dgOCbHV3WL+BOfCoCfqD6utHh3HAYI/vgeVOWQU8cC1EHOSryLJDD3A8GC2O4A1AgnehP/
-                            JFn8YLvm3Jue4Xo/7IuuaV7PHqy0Yp6nvnxExooIGwziMrWmIYQF436uu52yVSe1zblYkX
-                            +n/6tSrvIGqVkC8ObezSkBzIz3IVzTNwAAAMEAzfiDhxjCrCeXym9/HNxr/dPPuEMMJXTW
-                            h7+OaZ7pDKjrgJ4yxijKu7hf4/LiWaRXrW3t1kNANA1V38x9+zP/u+/nRtUW7/tiBadXtv
-                            QWK8Lh9PuVtYTAHMwa+D3nDK8NdVfGSUkKIT5+4I45RTlfdHps6ZLADZ+gOfq7ZHjoctk3
-                            FZxHiFt5kXv8BGyaOwnEueoL0taFUfotssGYunjZKcLSxxlDdObSoigAvDyu2R66Lz3he7
-                            vGH+2SOrk0rWevAAAAFnVidW50dUBpcC0xNzItMzEtMTAtOTQBAgME
-                            -----END OPENSSH PRIVATE KEY----- }}
+          MYSECRETKEY1: ${{ secrets.MYSECRETKEY1 }}
 
       - name: Install Dependencies and Build
         run: |
