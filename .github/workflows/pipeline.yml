@@ -56,7 +56,8 @@ jobs:
           -----END OPENSSH PRIVATE KEY-----" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan 3.7.69.51 >> ~/.ssh/known_hosts
-
+      - name: View NPM Error Log
+        run: cat /home/runner/.npm/_logs/2023-09-13T10_05_30_149Z-debug-0.log
       - name: Install Dependencies and Build
         run: |
           # Install dependencies and build your React app
