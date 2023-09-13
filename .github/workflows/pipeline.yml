@@ -25,7 +25,7 @@ jobs:
       - name: Install Dependencies and Build
         run: |
           # Install dependencies and build your React app
-          npm install
+          npm ci
           npm run build
 
       - name: Deploy Build to Server
