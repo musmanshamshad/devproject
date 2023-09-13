@@ -53,8 +53,7 @@ jobs:
           QWK8Lh9PuVtYTAHMwa+D3nDK8NdVfGSUkKIT5+4I45RTlfdHps6ZLADZ+gOfq7ZHjoctk3
           FZxHiFt5kXv8BGyaOwnEueoL0taFUfotssGYunjZKcLSxxlDdObSoigAvDyu2R66Lz3he7
           vGH+2SOrk0rWevAAAAFnVidW50dUBpcC0xNzItMzEtMTAtOTQBAgME
-          -----END OPENSSH PRIVATE KEY-----
-" > ~/.ssh/id_rsa
+          -----END OPENSSH PRIVATE KEY-----" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan 3.7.69.51 >> ~/.ssh/known_hosts
 
