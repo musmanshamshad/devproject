@@ -29,6 +29,12 @@ jobs:
           npm install --legacy-peer-deps
           npm run build
 
+      - name: Set CI to false and run build
+        run: |
+          export CI=false
+          npm ci
+          npm run build
+
       - name: Deploy Build to Server
         run: |
           # Copy the build artifacts to the server using SCP
