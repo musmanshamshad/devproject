@@ -3,7 +3,7 @@ name: Deploy to Server
 on:
   push:
     branches:
-      - devops # Change to your main branch name
+      - master # Change to your main branch name
 
 jobs:
   deploy:
@@ -16,11 +16,11 @@ jobs:
       - name: Set up SSH
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.MYSECRETKEY1 }}" > ~/.ssh/id_rsa
+          echo "-----BEGIN OPENSSH PRIVATE KEY-----
+          b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAABlwAAAAdzc2gtcnNhAAAAAwEAAQAAAYEAr7iDWbAjYKlf6vhjDR4vwA5n39GHgGH49IMtWS+pF4JSGa4Ru9FeDU/1+VMQGh755GJihPZxn78Poo5lbt1Unja1Q4QgPavDf2hkKiTWDMyEY6DRkZwn0kP18kQwRB3tf3NUjNOseF+NFWzivMG8z7DiX/OGKoFHfuQsDzYvpQ5HvCgPyUWxy5XMnvNqpUeyqICZsx7LWjOFHM5L3HxCNflLnUHHn6cQg6x3ddeNfgx5RSo3g/YIUUCd3a/tvoh94sVMaBVOxM5eDN/IdDJBwHZrLsYzLi3LoEDXdxibHbm9kMRjnPeP4ghsLIDXvmG5pm5i9+VyGuCXmaZOYR8WmZvyRr9fFS5hjhMKnwfSjiujelrhjI6PQRJzFAGJrOHS2c7gsFcOOmmga+9sdW1W5DdLRJlo3GcWt/iVG69ViT84lUpz+pDV1YQYlr0apaQWqjzc2UhnqLErXF4ABXAVAGAfy
+          -----END OPENSSH PRIVATE KEY-----" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan 3.7.69.51 >> ~/.ssh/known_hosts
-        env:
-          MYSECRETKEY1: ${{ secrets.MYSECRETKEY1 }}
 
       - name: Install Dependencies and Build
         run: |
