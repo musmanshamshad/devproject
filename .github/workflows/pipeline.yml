@@ -3,7 +3,7 @@ name: Deploy to Server
 on:
   push:
     branches:
-      - master # Change to your main branch name
+      - main # Change to your main branch name
 
 jobs:
   deploy:
@@ -32,4 +32,3 @@ jobs:
         run: |
           # Copy the build artifacts to the server using SCP
           scp -r ./build/* ubuntu@3.7.69.51:/home/ubuntu/projects
-          
