@@ -27,7 +27,6 @@ jobs:
           # Install dependencies and build your React app
           export CI=false
           npm install --force
-          npm install --legacy-peer-deps
           npm run build
 
       - name: Deploy Build to Server
