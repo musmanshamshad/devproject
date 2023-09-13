@@ -26,7 +26,7 @@ jobs:
         run: |
           # Install dependencies and build your React app
           npm install --force
-          npm audit
+          npm audit fix --force
           npm install --legacy-peer-deps
           npm run build
 
