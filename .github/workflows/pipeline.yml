@@ -34,3 +34,4 @@ jobs:
           # Copy the build artifacts to the server using SCP
           scp -r ./build/* ubuntu@65.0.20.5:/home/ubuntu/projects
 
+
